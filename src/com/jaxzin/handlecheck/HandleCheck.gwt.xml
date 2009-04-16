@@ -1,0 +1,9 @@
+<module rename-to="handlecheck">
+
+    <inherits name='com.google.gwt.user.User'/>
+
+    <entry-point class='com.jaxzin.handlecheck.client.HandleCheck'/>
+
+    <servlet path="/handlecheck"
+             class="com.jaxzin.handlecheck.server.HandleCheckServiceImpl"/>
+</module>

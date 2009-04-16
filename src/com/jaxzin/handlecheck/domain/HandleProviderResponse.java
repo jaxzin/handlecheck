@@ -1,0 +1,171 @@
+package com.jaxzin.handlecheck.domain;
+
+import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.Link;
+import com.jaxzin.handlecheck.client.HandleProvider;
+
+import javax.jdo.annotations.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * @author <a href="mailto:brian@jaxzin.com">Brian R. Jackson</a>
+ */
+@PersistenceCapable(identityType = IdentityType.APPLICATION)
+public class HandleProviderResponse {
+
+
+    private static final int ONE_MEGABYTE = 1024 * 1024;
+
+    // Since characters in Unicode can be up to 4 bytes in length,
+    // and the maximum entity size is 1 MiB,
+    // fragments can be up to 256K chars in length
+    private static final int FRAGMENT_SIZE = 1024 * 256;
+
+
+
+    @PrimaryKey
+    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+    private Key key;
+
+    @Persistent
+    @Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
+    private Key handleKey;
+
+    @Persistent
+    private Date receivedOn;
+
+    @Persistent
+    @Embedded
+    private Requestor requestor;
+
+    @Persistent
+    private boolean available;
+
+    @Persistent
+    private String providerName;
+
+    @Persistent
+    private Link providerUrl;
+
+    @Persistent
+    private int httpResponseCode;
+
+    @Persistent
+    private String httpResponseMessage;
+
+    @Persistent
+    @Order(extensions = @Extension(vendorName="datanucleus", key="list-ordering", value="key asc, value asc"))
+    private List<HttpHeader> httpHeaders = new ArrayList<HttpHeader>();
+
+    @Persistent
+    @Order(extensions = @Extension(vendorName = "datanucleus", key = "list-ordering", value = "order asc"))
+    private List<ResponseFragment> httpResponse = new LinkedList<ResponseFragment>();
+
+    public HandleProviderResponse(Key handleKey, Date receivedOn, Requestor requestor, boolean available, HandleProvider provider, String providerUrl, int httpResponseCode, String httpResponseMessage, List<HttpHeader> httpHeaders, String content) {
+        this.handleKey = handleKey;
+        this.receivedOn = receivedOn;
+        this.requestor = requestor;
+        this.available = available;
+        this.providerName = provider.name();
+        this.providerUrl = new Link(providerUrl);
+        this.httpResponseCode = httpResponseCode;
+        this.httpResponseMessage = httpResponseMessage;
+        this.httpHeaders = httpHeaders;
+
+        this.httpResponse = splitContent(content);
+    }
+
+    private List<ResponseFragment> splitContent(String content) {
+        List<ResponseFragment> fragments = new ArrayList<ResponseFragment>();
+        if(content != null) {
+            if(content.getBytes().length < ONE_MEGABYTE) {
+                fragments.add(new ResponseFragment(0, content));
+            } else {
+                StringBuilder builder = new StringBuilder(content);
+                int i = 0;
+                while(builder.length() > 0) {
+                    int fragmentLength = Math.min(FRAGMENT_SIZE, builder.length());
+                    fragments.add(new ResponseFragment(i++, builder.substring(0, fragmentLength)));
+                    builder.delete(0, fragmentLength);
+                }
+            }
+        }
+        return fragments;
+    }
+
+    public Key getKey() {
+        return key;
+    }
+
+    public Key getHandleKey() {
+        return handleKey;
+    }
+
+    public Date getReceivedOn() {
+        return receivedOn;
+    }
+
+    public void setReceivedOn(Date receivedOn) {
+        this.receivedOn = receivedOn;
+    }
+
+    public Requestor getRequestor() {
+        return requestor;
+    }
+
+    public void setRequestor(Requestor requestor) {
+        this.requestor = requestor;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    public HandleProvider getHandleProvider() {
+        return HandleProvider.valueOf(providerName);
+    }
+
+    public String getProviderUrl() {
+        return providerUrl != null ? providerUrl.getValue() : null;
+    }
+
+    public void setProviderUrl(String providerUrl) {
+        this.providerUrl = new Link(providerUrl);
+    }
+
+    public int getHttpResponseCode() {
+        return httpResponseCode;
+    }
+
+    public void setHttpResponseCode(int httpResponseCode) {
+        this.httpResponseCode = httpResponseCode;
+    }
+
+    public String getHttpResponseMessage() {
+        return httpResponseMessage;
+    }
+
+    public void setHttpResponseMessage(String httpResponseMessage) {
+        this.httpResponseMessage = httpResponseMessage;
+    }
+
+    public void addHttpHeader(String key, String value) {
+        httpHeaders.add(new HttpHeader(key, value));
+    }
+
+    public String getHttpContent() {
+        StringBuilder builder = new StringBuilder();
+        for (ResponseFragment responseFragment : httpResponse) {
+            builder.append(responseFragment.getFragment());
+        }
+        return builder.toString();
+    }
+
+}
