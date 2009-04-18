@@ -1,8 +1,7 @@
 package com.jaxzin.handlecheck.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.*;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.*;
 
@@ -63,6 +62,17 @@ public class HandleCheck implements EntryPoint {
                                         }
                                     }
                             );
+                        }
+                    }
+                }
+        );
+
+        // Pressing Enter will trigger the "Check" button
+        entryBox.addKeyDownHandler(
+                new KeyDownHandler() {
+                    public void onKeyDown(KeyDownEvent event) {
+                        if(event.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
+                            checkButton.click();
                         }
                     }
                 }
