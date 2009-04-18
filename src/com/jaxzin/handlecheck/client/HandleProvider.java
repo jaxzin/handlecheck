@@ -9,11 +9,6 @@ public enum HandleProvider {
             return httpResponseCode != 200;
         }
     },
-//    DIGG("digg", "http://digg.com/users/${handle}") {
-//        public boolean determineAvailability(String handle, int httpResponseCode, String body) {
-//            return httpResponseCode != 200;
-//        }
-//    },
     ESPN("ESPN", "http://sportsnation.espn.go.com/fans/${handle}") {
         public boolean determineAvailability(String handle, int httpResponseCode, String body) {
             return body.contains("Error: File Not Found");
@@ -58,7 +53,23 @@ public enum HandleProvider {
         public boolean determineAvailability(String handle, int httpResponseCode, String body) {
             return body.contains("No such user");
         }
-    };
+    },
+    FRIENDFEED("friendfeed", "http://friendfeed.com/${handle}") {
+        public boolean determineAvailability(String handle, int httpResponseCode, String body) {
+            return httpResponseCode == 404;
+        }
+    },
+    TUMBLR("tumblr", "http://${handle}.tumblr.com/") {
+        public boolean determineAvailability(String handle, int httpResponseCode, String body) {
+            return httpResponseCode == 404 || body.contains("We'll be back shortly!");
+        }
+    },
+    DIGG("digg", "http://digg.com/users/${handle}") {
+        public boolean determineAvailability(String handle, int httpResponseCode, String body) {
+            return body.contains("Oops, what you're looking for isn't here!");
+        }
+    }
+    ;
 
 
     private String displayName;
@@ -89,6 +100,7 @@ public enum HandleProvider {
     }
 
     public String getProviderUri(String handle) {
+        // todo: encode the handle properly here in a JS/Java neutral way
         return providerUri.replace("${handle}", handle);
     }
 

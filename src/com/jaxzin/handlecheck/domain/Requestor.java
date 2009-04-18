@@ -1,5 +1,7 @@
 package com.jaxzin.handlecheck.domain;
 
+import com.google.appengine.api.users.User;
+
 import javax.jdo.annotations.EmbeddedOnly;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -12,46 +14,22 @@ import javax.jdo.annotations.Persistent;
 public class Requestor {
 
     @Persistent
-    private boolean anonymous;
-
-    @Persistent
-    private String email;
-
-    @Persistent
-    private String userName;
+    private User user;
 
     @Persistent
     private String remoteHost;
 
-    public Requestor(boolean anonymous, String email, String userName, String remoteHost) {
-        this.anonymous = anonymous;
-        this.email = email;
-        this.userName = userName;
+    public Requestor(User user, String remoteHost) {
+        this.user = user;
         this.remoteHost = remoteHost;
     }
 
-    public boolean isAnonymous() {
-        return anonymous;
+    public User getUser() {
+        return user;
     }
 
-    public void setAnonymous(boolean anonymous) {
-        this.anonymous = anonymous;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getRemoteHost() {
@@ -69,19 +47,15 @@ public class Requestor {
 
         Requestor requestor = (Requestor) o;
 
-        if (anonymous != requestor.anonymous) return false;
-        if (email != null ? !email.equals(requestor.email) : requestor.email != null) return false;
         if (remoteHost != null ? !remoteHost.equals(requestor.remoteHost) : requestor.remoteHost != null) return false;
-        if (userName != null ? !userName.equals(requestor.userName) : requestor.userName != null) return false;
+        if (user != null ? !user.equals(requestor.user) : requestor.user != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = (anonymous ? 1 : 0);
-        result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (userName != null ? userName.hashCode() : 0);
+        int result = user != null ? user.hashCode() : 0;
         result = 31 * result + (remoteHost != null ? remoteHost.hashCode() : 0);
         return result;
     }
@@ -89,9 +63,7 @@ public class Requestor {
     @Override
     public String toString() {
         return "Requestor{" +
-                "anonymous=" + anonymous +
-                ", email='" + email + '\'' +
-                ", userName='" + userName + '\'' +
+                "user=" + user +
                 ", remoteHost='" + remoteHost + '\'' +
                 '}';
     }

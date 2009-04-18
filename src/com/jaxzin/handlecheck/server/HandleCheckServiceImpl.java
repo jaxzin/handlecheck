@@ -1,6 +1,6 @@
 package com.jaxzin.handlecheck.server;
 
-import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.users.UserServiceFactory;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.jaxzin.handlecheck.client.HandleCheckException;
 import com.jaxzin.handlecheck.client.HandleCheckResult;
@@ -17,10 +17,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
+import java.net.URLEncoder;
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -37,7 +35,7 @@ public class HandleCheckServiceImpl extends RemoteServiceServlet implements Hand
         boolean available;
         HttpURLConnection conn = null;
         try {
-            URL url = new URL(provider.getProviderUri(handle));
+            URL url = new URL(provider.getProviderUri(URLEncoder.encode(handle,"UTF-8")));
 
             conn = (HttpURLConnection) url.openConnection();
 
@@ -55,9 +53,7 @@ public class HandleCheckServiceImpl extends RemoteServiceServlet implements Hand
             // Now get a few more bits and persist all the information about this request
             final String message = conn.getResponseMessage();
 
-            final List<HttpHeader> httpHeaders = createHttpHeaders(conn.getHeaderFields());
-
-            persistRequestInfo(handle, provider, available, url, httpHeaders, code, message, contentBody);
+            persistRequestInfo(handle, provider, available, url, code, message);
 
 
         } catch (MalformedURLException e) {
@@ -109,7 +105,7 @@ public class HandleCheckServiceImpl extends RemoteServiceServlet implements Hand
 
 
 
-    private void persistRequestInfo(String handle, HandleProvider provider, boolean available, URL url, List<HttpHeader> httpHeaders, int code, String message, String contentBody) {
+    private void persistRequestInfo(String handle, HandleProvider provider, boolean available, URL url, int code, String message) {
         PersistenceManager pm = PMF.get().getPersistenceManager();
 
         try {
@@ -121,40 +117,30 @@ public class HandleCheckServiceImpl extends RemoteServiceServlet implements Hand
                     Handle h;
                     try {
                         // First see if it already exists
-                        h = pm.getObjectById(Handle.class, handle);
+                        h = pm.getObjectById(Handle.class, Handle.createKey(handle));
                         LOG.fine("Found handle for '" + handle + "'");
                     } catch (JDOObjectNotFoundException e) {
 //                        h = new Handle(handle, pm.getServerDate());
                         h = new Handle(handle, new Date());
+                        pm.makePersistent(h);
                         LOG.info("Creating handle for '" + handle + "'");
                     }
 
-                    final Key availabilityKey = HandleProviderAvailability.createKey(h, provider);
-                    HandleProviderAvailability availability;
-                    try {
-                        // First see if it already exists
-                        availability = pm.getObjectById(HandleProviderAvailability.class, availabilityKey);
-                        availability.setAvailable(available);
-                        LOG.fine("Found HandleProviderAvailability for '" + availabilityKey + "'");
-                    } catch (JDOObjectNotFoundException e) {
-                        availability = new HandleProviderAvailability(availabilityKey, provider, available);
-                        pm.makePersistent(availability);
-                        LOG.info("Creating HandleProviderAvailability for '" + availabilityKey + "'");
-                    }
+
+                    HandleProviderAvailability availability = new HandleProviderAvailability(provider, available);
 
                     // Add or update the availability
-                    h.getAvailability().add(availabilityKey);
+                    if(!h.getAvailability().add(availability)) {
+                        h.getAvailability().remove(availability);
+                        h.getAvailability().add(availability);
+                    }
 
                     // Add history
                     final HandleProviderResponse providerResponse = new HandleProviderResponse(
 //                                pm.getServerDate(),
-                            Handle.createKey(h),
                             new Date(),
-                            // todo: add support for logged in users
                             new Requestor(
-                                    true,
-                                    "",
-                                    "",
+                                    UserServiceFactory.getUserService().getCurrentUser(),
                                     getThreadLocalRequest().getRemoteHost()
                             ),
                             available,
@@ -162,18 +148,17 @@ public class HandleCheckServiceImpl extends RemoteServiceServlet implements Hand
                             url.toString(),
                             code,
                             message,
-                            httpHeaders,
-                            contentBody
+                            null,
+                            ""
                     );
 
-                    pm.makePersistent(providerResponse);
-
-                    h.getHistory().add(providerResponse.getKey());
+                    h.getHistory().add(providerResponse);
 
 
-                    pm.makePersistent(h);
 
                     tx.commit();
+
+                    break;
 
                 } catch (JDOCanRetryException e) {
                     if (attempt == RETRIES) {
@@ -208,13 +193,4 @@ public class HandleCheckServiceImpl extends RemoteServiceServlet implements Hand
 
 
 
-    private List<HttpHeader> createHttpHeaders(Map<String, List<String>> headerFields) {
-        List<HttpHeader> headers = new ArrayList<HttpHeader>();
-        for (Map.Entry<String, List<String>> entry : headerFields.entrySet()) {
-            for (String value : entry.getValue()) {
-                headers.add(new HttpHeader(entry.getKey(), value));
-            }
-        }
-        return headers;
-    }
 }

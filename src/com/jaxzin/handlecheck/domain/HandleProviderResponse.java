@@ -7,7 +7,6 @@ import com.jaxzin.handlecheck.client.HandleProvider;
 import javax.jdo.annotations.*;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -31,10 +30,6 @@ public class HandleProviderResponse {
     private Key key;
 
     @Persistent
-    @Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
-    private Key handleKey;
-
-    @Persistent
     private Date receivedOn;
 
     @Persistent
@@ -56,16 +51,15 @@ public class HandleProviderResponse {
     @Persistent
     private String httpResponseMessage;
 
-    @Persistent
-    @Order(extensions = @Extension(vendorName="datanucleus", key="list-ordering", value="key asc, value asc"))
-    private List<HttpHeader> httpHeaders = new ArrayList<HttpHeader>();
+//    @NotPersistent
+//    @Order(extensions = @Extension(vendorName="datanucleus", key="list-ordering", value="key asc, value asc"))
+//    private List<HttpHeader> httpHeaders = new ArrayList<HttpHeader>();
 
-    @Persistent
-    @Order(extensions = @Extension(vendorName = "datanucleus", key = "list-ordering", value = "order asc"))
-    private List<ResponseFragment> httpResponse = new LinkedList<ResponseFragment>();
+//    @NotPersistent
+//    @Order(extensions = @Extension(vendorName = "datanucleus", key = "list-ordering", value = "order asc"))
+//    private List<ResponseFragment> httpResponse = new LinkedList<ResponseFragment>();
 
-    public HandleProviderResponse(Key handleKey, Date receivedOn, Requestor requestor, boolean available, HandleProvider provider, String providerUrl, int httpResponseCode, String httpResponseMessage, List<HttpHeader> httpHeaders, String content) {
-        this.handleKey = handleKey;
+    public HandleProviderResponse(Date receivedOn, Requestor requestor, boolean available, HandleProvider provider, String providerUrl, int httpResponseCode, String httpResponseMessage, List<HttpHeader> httpHeaders, String content) {
         this.receivedOn = receivedOn;
         this.requestor = requestor;
         this.available = available;
@@ -73,9 +67,9 @@ public class HandleProviderResponse {
         this.providerUrl = new Link(providerUrl);
         this.httpResponseCode = httpResponseCode;
         this.httpResponseMessage = httpResponseMessage;
-        this.httpHeaders = httpHeaders;
+//        this.httpHeaders = httpHeaders;
 
-        this.httpResponse = splitContent(content);
+//        this.httpResponse = splitContent(content);
     }
 
     private List<ResponseFragment> splitContent(String content) {
@@ -98,10 +92,6 @@ public class HandleProviderResponse {
 
     public Key getKey() {
         return key;
-    }
-
-    public Key getHandleKey() {
-        return handleKey;
     }
 
     public Date getReceivedOn() {
@@ -157,15 +147,16 @@ public class HandleProviderResponse {
     }
 
     public void addHttpHeader(String key, String value) {
-        httpHeaders.add(new HttpHeader(key, value));
+//        httpHeaders.add(new HttpHeader(key, value));
     }
 
     public String getHttpContent() {
-        StringBuilder builder = new StringBuilder();
-        for (ResponseFragment responseFragment : httpResponse) {
-            builder.append(responseFragment.getFragment());
-        }
-        return builder.toString();
+//        StringBuilder builder = new StringBuilder();
+//        for (ResponseFragment responseFragment : httpResponse) {
+//            builder.append(responseFragment.getFragment());
+//        }
+//        return builder.toString();
+        return "";
     }
 
 }

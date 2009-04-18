@@ -14,33 +14,35 @@ public class Handle {
 
     @PrimaryKey
     @Persistent
-    private String handle;
+    private Key handle;
 
     @Persistent
     private Date lastCheckedOn;
 
     @Persistent
-    private Set<Key> availability = new HashSet<Key>();
+    @Order(extensions = @Extension(vendorName="datanucleus", key="list-ordering", value="providerName asc"))
+    private List<HandleProviderAvailability> availability = new LinkedList<HandleProviderAvailability>();
 
     @Persistent
-    private Set<Key> history = new HashSet<Key>();
+    @Order(extensions = @Extension(vendorName="datanucleus", key="list-ordering", value="receivedOn desc"))
+    private List<HandleProviderResponse> history = new ArrayList<HandleProviderResponse>();
 
+
+    public static Key createKey(String handle) {
+        return KeyFactory.createKey(Handle.class.getSimpleName(), handle);
+    }
 
     public static Key createKey(Handle handle) {
         return KeyFactory.createKey(Handle.class.getSimpleName(), handle.getHandle());
     }
     
     public Handle(String handle, Date lastCheckedOn) {
-        this.handle = handle;
+        this.handle = Handle.createKey(handle);
         this.lastCheckedOn = lastCheckedOn;
     }
 
     public String getHandle() {
-        return handle;
-    }
-
-    public void setHandle(String handle) {
-        this.handle = handle;
+        return handle.getName();
     }
 
     public Date getLastCheckedOn() {
@@ -51,12 +53,17 @@ public class Handle {
         this.lastCheckedOn = lastCheckedOn;
     }
 
-    public Set<Key> getAvailability() {
+    public List<HandleProviderAvailability> getAvailability() {
         return availability;
     }
 
-    public Set<Key> getHistory() {
+    public void setAvailability(List<HandleProviderAvailability> availability) {
+        this.availability = availability;
+    }
+
+    public List<HandleProviderResponse> getHistory() {
         return history;
+//        return Collections.emptyList();
     }
 
     @Override

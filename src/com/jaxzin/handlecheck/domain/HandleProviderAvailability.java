@@ -1,7 +1,6 @@
 package com.jaxzin.handlecheck.domain;
 
 import com.google.appengine.api.datastore.Key;
-import com.google.appengine.api.datastore.KeyFactory;
 import com.jaxzin.handlecheck.client.HandleProvider;
 
 import javax.jdo.annotations.*;
@@ -13,12 +12,8 @@ import javax.jdo.annotations.*;
 public class HandleProviderAvailability {
 
     @PrimaryKey
-    @Persistent
-    private Key key;
-
-    @Persistent
-    @Extension(vendorName="datanucleus", key="gae.parent-pk", value="true")
-    private Key handleKey;
+    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+    private Key id;
 
     @Persistent
     private String providerName;
@@ -26,18 +21,13 @@ public class HandleProviderAvailability {
     @Persistent
     private boolean available;
 
-    public HandleProviderAvailability(Key key, HandleProvider provider, boolean available) {
-        this.key = key;
+    public HandleProviderAvailability(HandleProvider provider, boolean available) {
         this.providerName = provider.name();
         setAvailable(available);
     }
 
     public Key getKey() {
-        return key;
-    }
-
-    public Key getHandleKey() {
-        return handleKey;
+        return id;
     }
 
     public HandleProvider getProvider() {
@@ -52,12 +42,6 @@ public class HandleProviderAvailability {
         this.available = available;
     }
 
-    public static Key createKey(Handle handle, HandleProvider provider) {
-        KeyFactory.Builder builder = new KeyFactory.Builder(Handle.class.getSimpleName(), handle.getHandle());
-        builder.addChild(HandleProviderAvailability.class.getSimpleName(), provider.name());
-        return builder.getKey();
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -65,9 +49,6 @@ public class HandleProviderAvailability {
 
         HandleProviderAvailability that = (HandleProviderAvailability) o;
 
-        if (available != that.available) return false;
-        if (handleKey != null ? !handleKey.equals(that.handleKey) : that.handleKey != null) return false;
-        if (key != null ? !key.equals(that.key) : that.key != null) return false;
         if (providerName != null ? !providerName.equals(that.providerName) : that.providerName != null) return false;
 
         return true;
@@ -75,18 +56,15 @@ public class HandleProviderAvailability {
 
     @Override
     public int hashCode() {
-        int result = key != null ? key.hashCode() : 0;
-        result = 31 * result + (handleKey != null ? handleKey.hashCode() : 0);
+        int result = 17;
         result = 31 * result + (providerName != null ? providerName.hashCode() : 0);
-        result = 31 * result + (available ? 1 : 0);
         return result;
     }
 
     @Override
     public String toString() {
         return "HandleProviderAvailability{" +
-                "key=" + key +
-                ", handleKey=" + handleKey +
+                "key=" + id +
                 ", providerName='" + providerName + '\'' +
                 ", available=" + available +
                 '}';
