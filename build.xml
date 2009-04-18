@@ -1,7 +1,7 @@
 <project name="HandleCheck" default="create-exploded-war">
     <property name="gwt.dir" location="${user.home}/Applications/gwt-mac-1.6.4/"/>
     <property name="sdk.dir" location="${user.home}/Applications/appengine-java-sdk/"/>
-    <property name="build.dir" location="out/exploded/HandlecheckWeb"/>
+    <property name="build.dir" location="target/handlecheck"/>
 
     <import file="${sdk.dir}/config/user/ant-macros.xml"/>
 
@@ -94,17 +94,39 @@
         </dev_appserver>
     </target>
 
+    <target name="runserver-only"
+            description="Starts the development server.">
+        <dev_appserver war="${build.dir}">
+        </dev_appserver>
+    </target>
+
     <target name="update" depends="create-exploded-war"
             description="Uploads the application to App Engine.">
         <appcfg action="update" war="${build.dir}"/>
     </target>
+
+    <target name="update-only"
+            description="Uploads the application to App Engine.">
+        <appcfg action="update" war="${build.dir}"/>
+    </target>
+
 
     <target name="update_indexes" depends="create-exploded-war"
             description="Uploads just the datastore index configuration to App Engine.">
         <appcfg action="update_indexes" war="${build.dir}"/>
     </target>
 
+    <target name="update_indexes-only"
+            description="Uploads just the datastore index configuration to App Engine.">
+        <appcfg action="update_indexes" war="${build.dir}"/>
+    </target>
+
     <target name="rollback" depends="create-exploded-war"
+            description="Rolls back an interrupted application update.">
+        <appcfg action="rollback" war="${build.dir}"/>
+    </target>
+
+    <target name="rollback-only"
             description="Rolls back an interrupted application update.">
         <appcfg action="rollback" war="${build.dir}"/>
     </target>

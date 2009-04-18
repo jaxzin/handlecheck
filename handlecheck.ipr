@@ -278,13 +278,6 @@
     <mapping directory="" vcs="svn" />
   </component>
   <component name="libraryTable">
-    <library name="lib">
-      <CLASSES>
-        <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.4.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
     <library name="gwt-user">
       <CLASSES>
         <root url="jar:///Users/JacksBrR/Applications/gwt-mac-1.6.4/gwt-user.jar!/" />

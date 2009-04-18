@@ -25,22 +25,105 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/Handle.java" afterPath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/Handle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/Requestor.java" afterPath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/Requestor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Handlecheck.iml" afterPath="$PROJECT_DIR$/Handlecheck.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlecheck.iws" afterPath="$PROJECT_DIR$/handlecheck.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/server/HandleCheckServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/server/HandleCheckServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/Handle.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/Handle.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/META-INF/jdoconfig.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/client" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/HandleCheck.gwt.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/admin" afterPath="$PROJECT_DIR$/src/main/webapp/admin" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/client/HandleCheckException.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/server/HandleCheckServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server/HandleCheckServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/META-INF" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/ResponseFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/ResponseFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/WEB-INF/datastore-indexes.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/datastore-indexes.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/HandleCheck.html" afterPath="$PROJECT_DIR$/src/main/webapp/HandleCheck.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/admin/clearDataStore.html" afterPath="$PROJECT_DIR$/src/main/webapp/admin/clearDataStore.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HttpHeader.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/HttpHeader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com/jaxzin" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/stylesheets" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/Requestor.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/Requestor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/client/HandleCheckResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckResult.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/META-INF" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/WEB-INF" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HandleProviderAvailability.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/HandleProviderAvailability.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HandleProviderResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/HandleProviderResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlecheck.ipr" afterPath="$PROJECT_DIR$/handlecheck.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HandleProviderAvailability.java" afterPath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HandleProviderAvailability.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/server/AdminServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/admin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HandleProviderResponse.java" afterPath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HandleProviderResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/admin/clearDataStore.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/client/HandleProvider.java" afterPath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/client/HandleProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/WEB-INF/datastore-indexes.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/client/HandleCheck.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheck.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/server/AdminServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server/AdminServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/server" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/client/HandleProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com" afterPath="$PROJECT_DIR$/src/main/java/com" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/client/HandleCheckService.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war" afterPath="$PROJECT_DIR$/src/main/webapp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/HandleCheck.gwt.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com/jaxzin/handlecheck/HandleCheck.gwt.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/jdoconfig.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/PMF.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/PMF.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/WEB-INF/logging.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logging.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin/handlecheck/client/HandleCheckServiceAsync.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckServiceAsync.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com/jaxzin/handlecheck" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/jaxzin" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/stylesheets/HandleCheck.css" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/HandleCheck.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/war/WEB-INF/appengine-web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" />
     </list>
+    <ignored path="target/classes/com/jaxzin/handlecheck/" />
+    <ignored path="target/.generated/" />
+    <ignored path="target/handlecheck/admin/" />
+    <ignored path="target/.generated/com/google/gwt/" />
+    <ignored path="target/gwt/" />
+    <ignored path="target/handlecheck/WEB-INF/classes/com/jaxzin/handlecheck/server/" />
+    <ignored path="target/.generated/com/google/gwt/user/client/ui/" />
+    <ignored path="target/.generated/com/google/gwt/i18n/" />
+    <ignored path="target/.generated/com/google/gwt/user/" />
+    <ignored path="target/.generated/com/google/" />
+    <ignored path="target/handlecheck/WEB-INF/classes/com/jaxzin/handlecheck/" />
+    <ignored path="target/.generated/com/google/gwt/user/client/rpc/core/java/" />
+    <ignored path="target/handlecheck/stylesheets/" />
+    <ignored path="target/classes/com/jaxzin/" />
+    <ignored path="target/handlecheck/" />
+    <ignored path="target/handlecheck/WEB-INF/classes/" />
+    <ignored path="target/.generated/com/jaxzin/" />
     <ignored path="handlecheck.iws" />
+    <ignored path="target/classes/com/jaxzin/handlecheck/domain/" />
+    <ignored path="target/classes/META-INF/" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="target/handlecheck/WEB-INF/classes/com/" />
+    <ignored path="target/handlecheck/WEB-INF/classes/META-INF/" />
+    <ignored path="target/.generated/com/" />
+    <ignored path="target/classes/com/jaxzin/handlecheck/server/" />
+    <ignored path="target/.generated/com/jaxzin/handlecheck/client/" />
+    <ignored path="target/war/work/" />
+    <ignored path="target/classes/com/jaxzin/handlecheck/client/" />
+    <ignored path="target/handlecheck/WEB-INF/classes/com/jaxzin/handlecheck/domain/" />
+    <ignored path="target/classes/" />
+    <ignored path="target/maven-archiver/" />
+    <ignored path="target/" />
+    <ignored path="target/handlecheck/META-INF/" />
+    <ignored path="target/war/" />
+    <ignored path="target/.generated/com/jaxzin/handlecheck/" />
+    <ignored path="target/handlecheck/handlecheck/" />
+    <ignored path="target/.generated/com/google/gwt/user/client/rpc/core/java/lang/" />
+    <ignored path="target/.generated/com/google/gwt/user/client/rpc/core/" />
+    <ignored path="target/handlecheck/WEB-INF/lib/" />
+    <ignored path="target/handlecheck/WEB-INF/" />
+    <ignored path="target/.generated/com/google/gwt/user/client/" />
+    <ignored path="target/handlecheck/WEB-INF/classes/com/jaxzin/" />
+    <ignored path="target/.generated/com/google/gwt/i18n/client/impl/" />
+    <ignored path="target/classes/com/" />
+    <ignored path="target/.generated/com/google/gwt/user/client/rpc/" />
+    <ignored path="target/gwt/handlecheck/" />
+    <ignored path="target/.generated/com/google/gwt/i18n/client/" />
+    <ignored path="target/handlecheck/WEB-INF/classes/com/jaxzin/handlecheck/client/" />
   </component>
   <component name="ChangesViewManager" flattened_view="false" show_ignored="false" />
   <component name="Commander">
@@ -96,57 +179,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Handle.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/Handle.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="19" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0">
+            <state line="338" column="38" selection-start="13537" selection-end="13537" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HandleProviderResponse.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HandleProviderResponse.java">
+      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="13" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HandleProviderAvailability.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HandleProviderAvailability.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="44" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HandleProvider.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/jaxzin/handlecheck/client/HandleProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="75" selection-start="3135" selection-end="3135" vertical-scroll-proportion="0.2994924">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HandleCheckServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/jaxzin/handlecheck/server/HandleCheckServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="89" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatastoreMappingManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Users/JacksBrR/Applications/appengine-java-sdk-1.2.0/src/orm/datanucleus-appengine-1.0.0.final-src.zip!/org/datanucleus/store/appengine/DatastoreMappingManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="32" selection-start="3868" selection-end="3868" vertical-scroll-proportion="0.0">
+            <state line="128" column="31" selection-start="4516" selection-end="4516" vertical-scroll-proportion="0.90799034">
               <folding />
             </state>
           </provider>
@@ -230,368 +275,6 @@
           <option name="myItemId" value="Handlecheck" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
         </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-core-1.1.0.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-core-1.1.0.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-core-1.1.0.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="store" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-core-1.1.0.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="store" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="mapped" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-core-1.1.0.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="store" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="mapped" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="scostore" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-core-1.1.0.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="sco" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-core-1.1.0.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="sco" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="backed" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-core-1.1.0.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="jdo" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-appengine-1.0.0.final.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-appengine-1.0.0.final.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="appengine" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Google AppEngine 1.2.0" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="datanucleus-appengine-1.0.0.final.jar" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="appengine" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="jdo" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Libraries" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.LibraryGroupNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -622,190 +305,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="war" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="war" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="WEB-INF" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="war" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="admin" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="META-INF" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="server" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="domain" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="src" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="client" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="handlecheck" />
-          <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="lib" />
           <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -831,7 +330,7 @@
   <component name="PropertiesComponent">
     <property name="project.structure.proportion" value="0.15" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.searchVisible" value="true" />
     <property name="MemberChooser.sorted" value="false" />
@@ -1031,9 +530,9 @@
       </method>
     </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="GWT Configuration.HandleCheck" />
-      <item index="1" class="java.lang.String" itemvalue="Application.HandleCheck" />
-      <item index="2" class="java.lang.String" itemvalue="Application.GWT Compiler" />
+      <item index="0" class="java.lang.String" itemvalue="Application.HandleCheck" />
+      <item index="1" class="java.lang.String" itemvalue="Application.GWT Compiler" />
+      <item index="2" class="java.lang.String" itemvalue="GWT Configuration.HandleCheck" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1102,7 +601,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997844" sideWeight="0.5" order="6" side_tool="false" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997844" sideWeight="0.63586205" order="6" side_tool="false" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" />
@@ -1138,7 +637,7 @@
     <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial import" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mavenized project." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -1150,6 +649,10 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Initial import" />
+    <MESSAGE value="Fixed data store issues.&#10;Added additional providers.&#10;Added support for non-alphanumeric handles." />
+    <MESSAGE value="Support for submitting request on pressing Enter." />
+    <MESSAGE value="Bump the appengine version during development" />
+    <MESSAGE value="Mavenized project." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1180,34 +683,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Users/JacksBrR/Applications/appengine-java-sdk-1.2.0/src/orm/datanucleus-core-1.1.0-src.zip!/datanucleus-core-1.1.0/src/java/org/datanucleus/jdo/JDOPersistenceManagerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="343" column="0" selection-start="13517" selection-end="13517" vertical-scroll-proportion="317.6154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Users/JacksBrR/Applications/appengine-java-sdk-1.2.0/src/orm/datanucleus-core-1.1.0-src.zip!/datanucleus-core-1.1.0/src/java/org/datanucleus/jdo/JDOPersistenceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="32" selection-start="5168" selection-end="5168" vertical-scroll-proportion="-5.423077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Users/JacksBrR/Applications/appengine-java-sdk-1.2.0/src/orm/datanucleus-core-1.1.0-src.zip!/datanucleus-core-1.1.0/src/java/org/datanucleus/ObjectManagerFactoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="25" selection-start="7353" selection-end="7353" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Users/JacksBrR/Applications/appengine-java-sdk-1.2.0/src/orm/datanucleus-core-1.1.0-src.zip!/datanucleus-core-1.1.0/src/java/org/datanucleus/store/FederationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="35" selection-start="11775" selection-end="11775" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Users/JacksBrR/Applications/appengine-java-sdk-1.2.0/src/orm/datanucleus-core-1.1.0-src.zip!/datanucleus-core-1.1.0/src/java/org/datanucleus/store/AbstractStoreManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="302" column="35" selection-start="13321" selection-end="13321" vertical-scroll-proportion="0.0">
@@ -1257,39 +732,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HandleProviderResponse.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
+        <state line="338" column="38" selection-start="13537" selection-end="13537" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/Handle.java">
+    <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="19" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jaxzin/handlecheck/domain/HandleProviderAvailability.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="44" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jaxzin/handlecheck/server/HandleCheckServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="89" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/jaxzin/handlecheck/client/HandleProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="75" selection-start="3135" selection-end="3135" vertical-scroll-proportion="0.2994924">
+        <state line="128" column="31" selection-start="4516" selection-end="4516" vertical-scroll-proportion="0.90799034">
           <folding />
         </state>
       </provider>

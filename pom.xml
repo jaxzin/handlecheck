@@ -1,0 +1,458 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.jaxzin.handlecheck</groupId>
+    <artifactId>handlecheck</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <description>A Google AppEngine-based web application for finding the availability of a username across these
+        services.
+    </description>
+    <inceptionYear>2009</inceptionYear>
+    <developers>
+        <developer>
+            <id>brian+google@jaxzin.com</id>
+            <email>brian@jaxzin.com</email>
+            <name>Brian R. Jackson</name>
+            <organizationUrl>http://www.jaxzin.com</organizationUrl>
+            <timezone>-5</timezone>
+            <roles>
+                <role>Developer</role>
+                <role>Owner</role>
+                <role>Administrator</role>
+            </roles>
+        </developer>
+    </developers>
+    <issueManagement>
+        <system>google-code</system>
+        <url>http://code.google.com/p/handlecheck/issues/list</url>
+    </issueManagement>
+
+    <scm>
+        <connection>http://handlecheck.googlecode.com/svn/trunk/</connection>
+        <developerConnection>https://handlecheck.googlecode.com/svn/trunk/</developerConnection>
+        <url>http://code.google.com/p/handlecheck/source/browse/</url>
+    </scm>
+
+
+    <dependencies>
+        <!-- Unit test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Web server APIs -->
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-servlet_2.5_spec</artifactId>
+            <version>1.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jsp_2.1_spec</artifactId>
+            <version>1.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-el_1.0_spec</artifactId>
+            <version>1.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- embedded JSTL -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!--
+          Data persistence APIs: JPA and JDO. Versions of datanucleus-core
+          and datanucleus-jpa are 1.1.1 which is newer than GAE jars (1.1.0)
+        -->
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jpa_3.0_spec</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jta_1.1_spec</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-core</artifactId>
+            <version>${datanucleus.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>transaction-api</artifactId>
+                    <groupId>javax.transaction</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-jpa</artifactId>
+            <version>${datanucleus.version}</version>
+            <exclusions><!-- Use geronimo-jta_1.1_spec instead -->
+                <exclusion>
+                    <groupId>javax.persistence</groupId>
+                    <artifactId>persistence-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--
+        <dependency>
+          <groupId>javax.jdo</groupId>
+          <artifactId>jdo2-api</artifactId>
+          <version>2.3-SNAPSHOT</version>
+        </dependency>-->
+        <!-- Google App Engine persistence runtime -->
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>datanucleus-appengine</artifactId>
+            <version>1.0.0.final</version>
+        </dependency>
+
+        <!-- Google App Engine API -->
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api</artifactId>
+            <version>1.0-sdk-1.2.0</version>
+        </dependency>
+
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+            <version>1.5.6</version>
+        </dependency>
+
+        <!-- GWT dependencies (from maven "central" repo) -->
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${gwt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${gwt.version}</version>
+            <classifier>${gwt.platform}</classifier>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.jdo</groupId>
+            <artifactId>jdo2-api</artifactId>
+            <version>2.3-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+    <properties>
+        <gwt.version>1.6.0</gwt.version>
+        <datanucleus.version>1.1.0</datanucleus.version>
+    </properties>
+
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+
+        <plugins>
+
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webResources>
+                        <!-- Include GWT output -->
+                        <resource>
+                            <directory>${project.build.directory}/gwt</directory>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+
+
+            <!-- JDK6 Compiler  -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <version>1.1-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <module>com.jaxzin.handlecheck.HandleCheck</module>
+                            <!--Lay GWT output onto exploded war -->
+                            <output>${project.build.directory}/gwt</output>
+                        </configuration>
+                        <goals>
+                            <goal>compile</goal>
+                            <!--We'll maintain the Async interfaces by hand for now-->
+                            <!--<goal>generateAsync</goal>-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.datanucleus</groupId>
+                <artifactId>maven-datanucleus-plugin</artifactId>
+                <version>1.1.0</version>
+                <configuration>
+                    <verbose>true</verbose>
+                    <mappingIncludes>**/*.jdo, **/com/jaxzin/handlecheck/domain/**.class</mappingIncludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>enhance</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.datanucleus</groupId>
+                        <artifactId>datanucleus-core</artifactId>
+                        <version>${datanucleus.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.datanucleus</groupId>
+                        <artifactId>datanucleus-rdbms</artifactId>
+                        <version>${datanucleus.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.datanucleus</groupId>
+                        <artifactId>datanucleus-enhancer</artifactId>
+                        <version>${datanucleus.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <!-- Jetty server for development -->
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <version>6.0.2</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                </configuration>
+            </plugin>
+            <!-- Tomcat server for development -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>tomcat-maven-plugin</artifactId>
+                <version>1.0-alpha-1</version>
+            </plugin>
+
+            <!-- Generate Eclipse project files -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <excludes><!-- GAE_CONTAINER already have these jars -->
+                        <exclude>org.datanucleus:datanucleus-core</exclude>
+                        <exclude>org.datanucleus:datanucleus-jpa</exclude>
+                        <exclude>com.google.appengine:datanucleus-appengine</exclude>
+                        <exclude>org.apache.geronimo.specs:geronimo-servlet_2.5_spec</exclude>
+                        <exclude>org.apache.geronimo.specs:geronimo-jsp_2.1_spec</exclude>
+                        <exclude>org.apache.geronimo.specs:geronimo-el_1.0_spec</exclude>
+                        <exclude>org.apache.geronimo.specs:geronimo-jpa_3.0_spec</exclude>
+                        <exclude>org.apache.geronimo.specs:geronimo-jta_1.1_spec</exclude>
+                        <exclude>javax.jdo:jdo2-api</exclude>
+                        <exclude>com.google.appengine:appengine-api</exclude>
+                    </excludes>
+                    <downloadSources>true</downloadSources>
+                    <!--<buildOutputDirectory>${basedir}/war/WEB-INF/classes</buildOutputDirectory>-->
+                    <wtpversion>1.5</wtpversion>
+                    <wtpapplicationxml>true</wtpapplicationxml>
+                    <additionalProjectnatures>
+                        <projectnature>
+                            com.google.appengine.eclipse.core.gaeNature
+                        </projectnature>
+                        <projectnature>
+                            com.google.gdt.eclipse.core.webAppNature
+                        </projectnature>
+                    </additionalProjectnatures>
+                    <additionalBuildcommands>
+                        <buildcommand>
+                            com.google.appengine.eclipse.core.enhancerbuilder
+                        </buildcommand>
+                        <buildcommand>
+                            com.google.appengine.eclipse.core.projectValidator
+                        </buildcommand>
+                        <buildcommand>
+                            com.google.gdt.eclipse.core.webAppProjectValidator
+                        </buildcommand>
+                    </additionalBuildcommands>
+                    <classpathContainers>
+                        <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
+                        <classpathContainer>com.google.appengine.eclipse.core.GAE_CONTAINER</classpathContainer>
+                    </classpathContainers>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <configuration>
+                            <tasks>
+                                <echo message="Will download Google App Engine for Java and run appcfg tool to upload the application."/>
+                                <mkdir dir="${java.io.tmpdir}/gaej"/>
+                                <get src="http://googleappengine.googlecode.com/files/appengine-java-sdk-1.2.0.zip"
+                                     dest="${java.io.tmpdir}/gaej/sdk.zip" verbose="yes" usetimestamp="true"/>
+                                <unzip src="${java.io.tmpdir}/gaej/sdk.zip" dest="${java.io.tmpdir}/gaej"/>
+                                <java fork="false" classname="com.google.appengine.tools.admin.AppCfg">
+                                    <sysproperty key="appengine.sdk.root"
+                                                 value="${java.io.tmpdir}/gaej/appengine-java-sdk-1.2.0"/>
+                                    <classpath>
+                                        <fileset dir="${java.io.tmpdir}/gaej">
+                                            <include name="**/*.jar"/>
+                                        </fileset>
+                                    </classpath>
+                                    <arg value="update"/>
+                                    <arg value="${basedir}/target/${project.artifactId}"/>
+                                </java>
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+    <repositories><!--
+    <repository>
+      <id>DataNucleus_Repos</id>
+      <name>DataNucleus Repository</name>
+      <url>http://www.datanucleus.org/downloads/maven</url>
+      <layout>legacy</layout>
+    </repository>
+    <repository>
+      <id>DataNucleus_Repos2</id>
+      <name>DataNucleus Repository</name>
+      <url>http://www.datanucleus.org/downloads/maven2</url>
+    </repository>
+-->
+        <!-- We can load datanucleus jars from either mirrors.ibiblio.org or DataNucleus repos above
+          <repository> <id>mirrors.ibiblio.org</id>
+          <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
+          </repository>
+        -->
+        <!-- To access Google App Engine jars -->
+        <repository>
+            <id>www.mvnsearch.org</id>
+            <name>www.mvnsearch.org</name>
+            <url>http://www.mvnsearch.org/maven2/</url>
+        </repository>
+
+    </repositories>
+    <pluginRepositories><!--
+    <pluginRepository>
+      <id>DataNucleus_2</id>
+      <url>http://www.datanucleus.org/downloads/maven2/</url>
+    </pluginRepository>
+      <pluginRepository> <id>mirrors.ibiblio.org</id>
+      <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
+      </pluginRepository> -->
+        <pluginRepository>
+            <id>maven-repository.dev.java.net</id>
+            <name>Java.net Maven 1 Repository (legacy)</name>
+            <url>http://download.java.net/maven/1</url>
+            <layout>legacy</layout>
+        </pluginRepository>
+        <pluginRepository>
+            <id>codehaus.snapshots</id>
+            <name>Codehause Snapshot Repository</name>
+            <url>http://snapshots.repository.codehaus.org/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+    <!--  profiles (with activation per platform) -->
+    <profiles>
+        <profile>
+            <id>windows</id>
+            <properties>
+                <gwt.platform>windows</gwt.platform>
+            </properties>
+            <activation>
+                <os>
+                    <family>windows</family>
+                </os>
+            </activation>
+        </profile>
+        <profile>
+            <id>mac</id>
+            <properties>
+                <gwt.platform>mac</gwt.platform>
+            </properties>
+            <activation>
+                <os>
+                    <family>mac</family>
+                </os>
+            </activation>
+        </profile>
+        <profile>
+            <id>linux</id>
+            <properties>
+                <gwt.platform>linux</gwt.platform>
+            </properties>
+            <activation>
+                <os>
+                    <name>linux</name>
+                </os>
+            </activation>
+        </profile>
+    </profiles>
+
+</project>
