@@ -16,21 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * <p></p>
- * <p/>
- * <p>
- * <div style="font-weight:bold">Revision Information:</div>
- * <ul>
- * <li>$Id$</li>
- * <li>$Author$</li>
- * <li>$DateTime$</li>
- * </ul>
- * </p>
- * <p/>
- * <p>Copyright ©2009 ESPN.com and Disney Interactive Media Group.  All rights reserved.</p>
- *
- * @author <a href="mailto:Brian.R.Jackson@espn3.com">Brian R. Jackson</a>
- * @version $Change$
+ * @author <a href="mailto:brian@jaxzin.com">Brian R. Jackson</a>
  */
 public class AdminServlet extends HttpServlet {
 
