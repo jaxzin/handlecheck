@@ -1,3 +1,9 @@
+<!--
+
+Acknowledgements:
+Thai Ha, for a great boilerplate Maven project.
+    http://winkjava.110mb.com/gaehelloworld/helloworld.zip
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -6,20 +12,22 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <name>Handle Check</name>
     <description>A Google AppEngine-based web application for finding the availability of a username across these
         services.
     </description>
+    <url>http://handlecheck.jaxzin.com</url>
     <inceptionYear>2009</inceptionYear>
+
     <developers>
         <developer>
             <id>brian+google@jaxzin.com</id>
             <email>brian@jaxzin.com</email>
             <name>Brian R. Jackson</name>
-            <organizationUrl>http://www.jaxzin.com</organizationUrl>
+            <url>http://www.jaxzin.com</url>
             <timezone>-5</timezone>
             <roles>
-                <role>Developer</role>
-                <role>Owner</role>
+                <role>Committer</role>
                 <role>Administrator</role>
             </roles>
         </developer>
@@ -28,6 +36,36 @@
         <system>google-code</system>
         <url>http://code.google.com/p/handlecheck/issues/list</url>
     </issueManagement>
+    <licenses>
+        <license>
+            <name>GNU GENERAL PUBLIC LICENSE, version 3</name>
+            <url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <mailingLists>
+        <mailingList>
+            <name>handlecheck-users</name>
+            <archive>http://groups.google.com/group/handlecheck-users</archive>
+            <post>handlecheck-users@googlegroups.com</post>
+            <subscribe>handlecheck-users-subscribe@googlegroups.com</subscribe>
+            <unsubscribe>handlecheck-users-unsubscribe@googlegroups.com</unsubscribe>
+        </mailingList>
+        <mailingList>
+            <name>handlecheck-dev</name>
+            <archive>http://groups.google.com/group/handlecheck-dev</archive>
+            <post>handlecheck-dev@googlegroups.com</post>
+            <subscribe>handlecheck-dev-subscribe@googlegroups.com</subscribe>
+            <unsubscribe>handlecheck-dev-unsubscribe@googlegroups.com</unsubscribe>
+        </mailingList>
+        <mailingList>
+            <name>handlecheck-announce</name>
+            <archive>http://groups.google.com/group/handlecheck-announce</archive>
+            <post>handlecheck-announce@googlegroups.com</post>
+            <subscribe>handlecheck-announce-subscribe@googlegroups.com</subscribe>
+            <unsubscribe>handlecheck-announce-unsubscribe@googlegroups.com</unsubscribe>
+        </mailingList>
+    </mailingLists>
 
     <scm>
         <connection>http://handlecheck.googlecode.com/svn/trunk/</connection>
