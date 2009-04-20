@@ -25,10 +25,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlecheck.iws" afterPath="$PROJECT_DIR$/handlecheck.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handlecheck.ipr" afterPath="$PROJECT_DIR$/handlecheck.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/Requestor.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/Requestor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/HandleProviderResponse.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/HandleProviderResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/HandleProviderAvailability.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/HandleProviderAvailability.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/datastore-indexes.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/datastore-indexes.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/ResponseFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/ResponseFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logging.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logging.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/HandleCheck.html" afterPath="$PROJECT_DIR$/src/main/webapp/HandleCheck.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/PMF.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/PMF.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/Handle.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/Handle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/HttpHeader.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/domain/HttpHeader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheck.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server/AdminServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server/AdminServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckService.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server/HandleCheckServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server/HandleCheckServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckServiceAsync.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckServiceAsync.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckException.java" afterPath="$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckException.java" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="handlecheck.iws" />
@@ -87,8 +105,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HandleCheck.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HandleCheck.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/HandleCheck.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="3" selection-start="913" selection-end="913" vertical-scroll-proportion="0.6514286">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HandleCheck.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="13" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HandleCheckException.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="13" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HandleCheckService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="17" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appengine-web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -96,28 +168,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server/AdminServlet.java">
+      <file leaf-file-name="logging.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/logging.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="21" selection-start="1713" selection-end="1761" vertical-scroll-proportion="-4.275862">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+            <state />
+          </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="HandleCheckServiceImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server/HandleCheckServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="848" selection-end="922" vertical-scroll-proportion="0.0">
+            <state line="45" column="0" selection-start="1668" selection-end="1742" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -654,7 +735,7 @@
     <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="IDEA setting updates." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
@@ -670,6 +751,9 @@
     <MESSAGE value="Added IDEA module settings." />
     <MESSAGE value="Added AdSense" />
     <MESSAGE value="Fixed Javadoc" />
+    <MESSAGE value="Added site footer." />
+    <MESSAGE value="Added mailing list, license and site information to pom." />
+    <MESSAGE value="IDEA setting updates." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -691,13 +775,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="21" selection-start="1713" selection-end="1761" vertical-scroll-proportion="-4.275862">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server/AdminServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
@@ -707,14 +784,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/server/HandleCheckServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="848" selection-end="922" vertical-scroll-proportion="0.0">
+        <state line="45" column="0" selection-start="1668" selection-end="1742" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="13" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="13" selection-start="1002" selection-end="1002" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jaxzin/handlecheck/client/HandleCheckService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="17" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/logging.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/HandleCheck.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="3" selection-start="913" selection-end="913" vertical-scroll-proportion="0.6514286">
           <folding />
         </state>
       </provider>
@@ -735,7 +877,7 @@
                   </option>
                 </SplitterProportionsDataImpl>
               </option>
-              <option name="lastEditedConfigurable" value="Jaxzin" />
+              <option name="lastEditedConfigurable" value="Handlecheck" />
             </UIState>
           </value>
         </entry>
@@ -789,7 +931,7 @@
                   </option>
                 </SplitterProportionsDataImpl>
               </option>
-              <option name="lastEditedConfigurable" value="Jaxzin" />
+              <option name="lastEditedConfigurable" value="Handlecheck" />
             </UIState>
           </value>
         </entry>
