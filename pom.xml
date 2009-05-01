@@ -216,18 +216,11 @@
             <version>${gwt.version}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-dev</artifactId>
-            <version>${gwt.version}</version>
-            <classifier>${gwt.platform}</classifier>
-            <scope>provided</scope>
-        </dependency>
 
         <dependency>
             <groupId>javax.jdo</groupId>
             <artifactId>jdo2-api</artifactId>
-            <version>2.3-SNAPSHOT</version>
+            <version>2.3-20090302111651</version>
         </dependency>
 
     </dependencies>
@@ -273,7 +266,10 @@
                 <executions>
                     <execution>
                         <configuration>
-                            <module>com.jaxzin.handlecheck.HandleCheck</module>
+                            <modules>
+                                <module>com.jaxzin.handlecheck.HandleCheck</module>
+                                <!--<module>com.jaxzin.handlecheck.feedback.Feedback</module>-->
+                            </modules>
                             <!--Lay GWT output onto exploded war -->
                             <output>${project.build.directory}/gwt</output>
                         </configuration>
@@ -284,6 +280,15 @@
                         </goals>
                     </execution>
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.google.gwt</groupId>
+                        <artifactId>gwt-dev</artifactId>
+                        <version>${gwt.version}</version>
+                        <classifier>${gwt.platform}</classifier>
+                        <scope>provided</scope>
+                    </dependency>
+                </dependencies>
             </plugin>
 
             <plugin>
